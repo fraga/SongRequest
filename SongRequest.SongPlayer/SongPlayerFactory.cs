@@ -27,7 +27,7 @@ namespace SongRequest.SongPlayer
 
         public static ISongplayer GetSongPlayer()
         {
-            return Instance.SongPlayer;
+            return Instance.SongPlayers.Find(t => t.Metadata.Platform == Environment.OSVersion.Platform && t.Metadata.PlayerType == "Vlc").Value;
         }
 
         [ImportMany]
