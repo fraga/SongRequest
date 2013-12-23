@@ -1,6 +1,8 @@
 using System.ComponentModel.Composition;
 using System.ComponentModel.Composition.Hosting;
 using SongRequest.Config;
+using System;
+using System.Collections.Generic;
 
 namespace SongRequest.SongPlayer
 {
@@ -28,8 +30,10 @@ namespace SongRequest.SongPlayer
             return Instance.SongPlayer;
         }
 
-        [Import(typeof(ISongplayer))]
-        public ISongplayer SongPlayer { get; set; }
+        [ImportMany]
+        List<Lazy<ISongplayer, ISongPlayerData>> SongPlayers;
+
+        private ISongplayer CurrentSongPlayer;
         
         private SongPlayerFactory()
         {
