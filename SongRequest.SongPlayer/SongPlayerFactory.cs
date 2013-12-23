@@ -33,8 +33,6 @@ namespace SongRequest.SongPlayer
         [ImportMany]
         List<Lazy<ISongplayer, ISongPlayerData>> SongPlayers;
 
-        private ISongplayer CurrentSongPlayer;
-        
         private SongPlayerFactory()
         {
             InitializeAddinCatalog();
