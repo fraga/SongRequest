@@ -9,5 +9,6 @@ namespace SongRequest.SongPlayer
     {
         PlatformID Platform { get; }
         string PlayerType { get; }
+        string Desc { get; }
     }
 }
