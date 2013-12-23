@@ -13,7 +13,8 @@ namespace SongRequest
             {string.Empty, new IndexHandler(typeof(Dispatcher).Assembly.GetManifestResourceStream)},
             {"static", new StaticHandler(typeof(Dispatcher).Assembly.GetManifestResourceStream)},
             {"dynamic", new DynamicHandler()},            
-            {"favicon.ico", new FaviconHandler()}
+            {"favicon.ico", new FaviconHandler()},
+            {"playeraddin", new SongPlayerHandler()}
         };
 
         public static void ProcessRequest(HttpListenerContext context)
