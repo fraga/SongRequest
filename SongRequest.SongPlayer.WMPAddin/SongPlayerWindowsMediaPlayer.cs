@@ -8,6 +8,9 @@ using WMPLib;
 namespace SongRequest.SongPlayer.WMPAddin
 {
     [Export(typeof(ISongplayer))]
+    [ExportMetadata("Platform", PlatformID.Win32NT)]
+    [ExportMetadata("PlayerType", "Default")]
+    [ExportMetadata("Desc", "Default song player for windows")]
     public class SongPlayerWindowsMediaPlayer : ISongplayer, IDisposable
     {
         private static object lockObject = new object();

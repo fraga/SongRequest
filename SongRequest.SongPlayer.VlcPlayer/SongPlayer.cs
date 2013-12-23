@@ -8,6 +8,9 @@ using SongRequest.SongPlayer.VlcPlayer;
 namespace SongRequest.SongPlayer
 {
     [Export(typeof(ISongplayer))]
+    [ExportMetadata("Platform", PlatformID.Win32NT)]
+    [ExportMetadata("PlayerType", "Vlc")]
+    [ExportMetadata("Desc", "VLC song player for windows")]
     public class SongPlayer : ISongplayer, IDisposable
     {
         private static object lockObject = new object();
