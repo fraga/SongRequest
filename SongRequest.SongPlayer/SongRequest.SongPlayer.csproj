@@ -41,6 +41,7 @@
   <ItemGroup>
     <Compile Include="FairQueue.cs" />
     <Compile Include="ISongPlayer.cs" />
+    <Compile Include="ISongPlayerData.cs" />
     <Compile Include="PlayerStatus.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RequestedSong.cs" />
