@@ -8,8 +8,7 @@ using SongRequest.SongPlayer.VlcPlayer;
 namespace SongRequest.SongPlayer
 {
     [Export(typeof(ISongplayer))]
-    [ExportMetadata("Platform", PlatformID.Win32NT)]
-    [ExportMetadata("PlayerType", "Vlc")]
+    [ExportMetadata("PlayerType", "Default")]
     [ExportMetadata("Desc", "VLC song player for windows")]
     public class SongPlayer : ISongplayer, IDisposable
     {

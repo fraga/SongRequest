@@ -7,7 +7,6 @@ namespace SongRequest.SongPlayer
 {
     public interface ISongPlayerData
     {
-        PlatformID Platform { get; }
         string PlayerType { get; }
         string Desc { get; }
     }
